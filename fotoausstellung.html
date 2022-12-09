@@ -1,0 +1,119 @@
+
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Fotoausstellung</title>
+    <link href="mystylesFotoausstellung.css" rel="stylesheet" type="text/css">  
+    <script type="text/javascript" src="fotoausstellung.js"></script>
+    <link rel="stylesheet" type="text/css" href="glider.css">
+    <script src="glider.js"></script>
+</head>
+
+<script src="glider.js"></script>
+<body>
+ <div class="divClass">
+    <header>
+     <h1 id="headFotoausstellung">Fotoausstellung “Meine Heimat München”</h1>
+    </header>
+
+
+   <div class="glider-contain"  style="width:80%">
+    <div class="glider">
+      <div class="zoomable"><img src="nature 6.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 7.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 8.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 9.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 3.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 4.jpg" class="imageKarusell"></img></div>
+      <div class="zoomable"><img src="nature 5.jpg" class="imageKarusell"></img></div>
+    </div>
+  
+    <button aria-label="Previous" class="glider-prev">«</button>
+    <button aria-label="Next" class="glider-next">»</button>
+    <div role="tablist" class="dots"></div>
+  </div>
+
+  <div style="display: flex; flex-wrap: wrap;">
+    <p style="width: 60%; color: #44403F; padding-left: 80px; padding-right: 20px; font-size: medium;">
+      Der Nachbarschaftstreff Pasing (Josef-Felder-Straße 45) lädt am Freitag, 8. Juli, um 17 Uhr zur Eröffnung der Fotoausstellung "Meine Heimat München" ein. Man kann dort  auch diese meine Fotos finden.
+
+Menschen, die in München leben, alt Eingesessene und neu Zugewanderte zeigen „ihre Stadt“ und erzählen mit den Bildern Geschichten über alte und neu gewonnene Heimat. Der Nachbarschaftstreff Pasing will Begegnungsräume schaffen, in denen weltanschauliche und kulturelle Vielfalt gelebt wird und bietet dazu Projekte und Veranstaltungen an. 
+
+    </p>
+    <div class="zoomable">
+      <img id="fotoMe" style="float:right; pointer-events: none; margin-right: 0.4rem; flex: 1;" src="foto_ich.jpg"></img>
+</div>
+  </div>
+
+
+<div id="CommentList">
+<p >Kommentäre: </p>
+</div>
+
+
+<form  style="display: flex; flex-wrap: wrap;"  id="form1" method="post" enctype="text/plain" 
+action="" onsubmit="return submitKomment(this);">
+  <p style="width: 50%;" >
+      <label for="vorname">Vorname</label>
+      <input type="text" name="prename" id="vorname">
+  </p>
+  <p style="width: 50%;">
+      <label for="email">E-Mail</label>
+      <input type="text" name="mail" id="email">
+  </p>
+   <p style="width: 50%;">
+      <label for="nachname">Nachname</label>
+      <input type="text" name="name" id="nachname">
+  </p>
+ 
+  <p >Ich wohne in
+  <br>
+      <label for="germany">Deutschland</label>
+      <input type="radio" name="country" value="Deutschland" id="deutsch">
+   <label for="ausland">Ausland</label>
+      <input type="radio" name="country" value="Ausland" id="ausland">
+      <br>
+  </p>
+  <p style="width: 100%;">
+   
+    <img id="fotoKomment" src="https://cdn2.thecatapi.com/images/MTc0Njg1MQ.jpg"></img>
+    <input  type="button" name="button" id="bildNew" value="Bild ändern">
+   
+</p>
+ <p > Hier kann man einen Kommentar hinterlassen...</p>
+  <textarea id="frage2" name="frage2" rows="4" cols="50%"></textarea>
+  </p>
+ 
+  <p style="width: 50%;">
+      <input type="submit" name="button" id="senden" value="Senden">
+  </p>
+ </form>
+</section> 
+
+     
+</div>
+
+  <a href="index.html" >Zurück auf die Homepage</a>
+  <script src="glider.js"></script>
+
+  <div id="fullpage" onclick="this.style.display='none';"></div>
+
+  <div  id="kommentFormTemplate">  
+    <nav>
+    <img id="thisFoto"></img>
+    <p id="KommentorName"></p>
+    <p id="KommentorSecondName"></p>
+    <p>&nbsp aus &nbsp</p>
+    <p id="KommentarText"></p>
+    </nav>
+    
+    <p id="KommentarMy"></p></li>
+   
+  </div>
+
+ 
+
+</body>
+
+</html>

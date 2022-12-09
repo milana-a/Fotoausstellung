@@ -1,0 +1,159 @@
+<form id="form1" method="post" enctype="text/plain" action="mailto:milana.anikushina@t-online.de">
+    <p>
+        <label for="vorname">Vorname</label>
+        <input type="text" name="prename" id="vorname">
+    </p>
+     <p>
+        <label for="nachname">Nachname</label>
+        <input type="text" name="name" id="nachname">
+    </p>
+       <p>
+        <label for="adresse">Adresse</label>
+        <input type="text" name="address" id="adresse">
+    </p>
+     <p>
+        <label for="email">E-Mail</label>
+        <input type="text" name="mail" id="email">
+    </p>
+     <p>
+        <label for="frage1">Was habe ich für Sie entwickelt?</label>
+        <input type="text" name="frage_1" id="frage1">
+    </p>
+   <p>Wie zufrieden sind Sie mit Ergebnis?</p>
+    <textarea id="frage2" name="frage_2" rows="4" cols="35%"></textarea>
+    <p>
+        <label for="frage3">Wie empfinden Sie die Betreuung?</label>
+        <select name="antworten" id="frage3">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+        </select>
+    </p>
+    <p>Ich bin
+    <br>
+        <label for="weiblich">weiblich</label>
+        <input type="radio" name="geschlecht" value="female" id="weiblich">
+     <label for="maennlich">männlich</label>
+        <input type="radio" name="geschlecht" value="male" id="maennlich">
+        <br>
+    </p>
+
+    <p>Ich möchte in Zukunft Mitteilungen erhalten per</p>
+    <p>
+    <laber for="post">Post</laber>
+        <input type="checkbox" name="antwort1" value="ja" id="alle">
+        <laber for="email">E-Mail</laber>
+    <input type="checkbox" name="antwort2" value="ja" id="nix">
+    </p>
+    <p>
+        <input type="submit" name="button" id="sende" value="Senden"
+    </p>
+   </form>
+ </section> 
+
+ <section style="background-color:#f1a4a4; width: 60%;">
+   <h1>
+       Grafiks
+   </h1>
+   <p>Kommentar</p>
+ </section>
+
+ <!--  -->
+
+ <body>
+    <h1>
+    </h1>
+    <ul class="image-overview">
+      <li class="image"><img src="/myimage/somepath" id="image1"></img></li>
+    </ul>
+  
+    <p>Comments: <span class="amount-comments"></span></p>
+  </body>
+  const createOverlay = (src) => {
+    const markup = `
+      <div>
+        <span class="close-button">x</span>
+        <img src="${src}" />
+      </div>
+    `;
+    return markup;
+  };
+  const closeOverlay = (markup, closeButton, closeListener) => {
+    closeButton.removeEventListener('click', closeListener);
+    body.remove(markup);
+  };
+  const initCarousel = () => {
+    const imageList = document.querySelector('.image*');
+    new Glider(imageList, {
+      slidesToShow: 4,
+      duration: 2,
+    });
+  };
+  const initCloseHandler = () => {
+    const closeButton = document.querySelector('close-button');
+    const closeListener = closeButton.addEventListener('click', closeOverlay(
+      markup,
+      closeButton,
+      closeListener)
+    );
+  };
+  const initClickHandler = () => {
+    const imageOverview = document.querySelector('.image-overview');
+    imageOverview.addEventListener('click', (event) => {
+      const image = event.target;
+      const src = image.getAttribute('src'); // image1
+      const markup = createOverlay(src);
+      const body = document.querySelector('body');
+      body.append(markup);
+      initCloseHandler();
+    });
+  };
+  let amountOfComments = 0;
+  const comments = [];
+  const updateAmountOfComments = () => {
+    const amountSpan = document.querySelector('.amount-comments');
+    // amountSpan.textContent = amountOfComments;
+    amountSpan.textContent = comments.length;
+  };
+  const processUserInput = () => {
+    // some magic
+    // amountOfComments++;
+    updateAmountOfComments();
+  };
+  const getRandomPicture = () => {
+    // use Fetch API for that
+    const someAPIResource = 'https://api.storyblok.com/v1/cdn/spaces/me/';
+    fetch(someAPIResource).then((response) => {
+      if (response.ok) {
+        const { images } = response.data;
+      }
+    });
+  };
+  const initImageHandler = () => {
+    const imageButton = document.querySelector('whatever-its-called');
+    imageButton.addEventListener('click', getRandomPicture);
+  };
+  // Structure of code
+  window.addEventListener('load', () => {
+    initCarousel();
+    initClickHandler();
+    updateAmountOfComments();
+    initImageHandler();
+  });
+  
+  
+  const markup = document.createElement('div');
+  markup.setAttribute("ID", "obj_overlay");
+  document.body.appendChild(markup);
+  var elem = document.createElement("img");
+elem.setAttribute("src", "${src}");
+elem.setAttribute("height", "768");
+elem.setAttribute("width", "1024");
+elem.setAttribute("alt", "Flower");
+document.getElementById("placehere").appendChild(elem);
+  
+  
+  
+  
+  

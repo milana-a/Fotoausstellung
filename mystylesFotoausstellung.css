@@ -1,0 +1,103 @@
+
+html {
+    font-size: 100%;
+    background: linear-gradient(180deg, #FFFFD2 0%, rgba(255, 255, 210, 0) 100%), #FFFFFF;
+}
+header {
+    width: 100%;
+}
+#headFotoausstellung {
+    font-size: 2rem;
+    padding: 0.8rem;
+    width: 100%;
+    font-family: Inter;
+    font-style: normal;
+    line-height: 58px;
+    align-items: center;
+    text-align: center;
+    color: #44403F;
+}
+   
+img {
+    max-width: 12rem;
+    border-radius: 0.9em;
+    margin: 0.2rem;
+  }
+
+  nav {
+
+    text-align: center;
+    margin: 0 ;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+  }
+  .divClass{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto 20px auto;
+  }
+
+
+#fullpage {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#kommentFormTemplate {
+    display: none;
+}
+
+#kommentForm{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#KommentarMy {
+    border-radius: 16px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(252, 252, 252);
+    padding: 8px;
+    background-color:  rgb(247, 228, 153);
+    color: #6b5f5f;
+    width: 400px;
+    font-family: Arial, Helvetica, sans-serif;
+} 
+
+#fotoKomment, #thisFoto {
+   
+    width: 126px;
+    height: 126px;
+    border-radius: 100px;
+   margin: 16px;
+}
+#CommentList {
+
+  font-size: large;
+}
+
+/* API Cats */
+.maincontent{
+    padding-top: 0%;
+    padding-left:0%;
+  }
+  
+  .col {
+
+  }
+
+  .imgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
