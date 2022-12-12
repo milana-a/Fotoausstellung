@@ -73,6 +73,7 @@ function submitKomment(theForm) {
   //
   if (!rad) { 
     alert('Enter Location');
+    return false;
    }
 
    // I take the Template, copy it and put data from the form
